@@ -1,0 +1,24 @@
+﻿<Window x:Class="OverlayKey.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="Настройки" Height="260" Width="370"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <StackPanel Margin="10">
+        <TextBlock Text="Цвет клавиатуры:"/>
+        <StackPanel Orientation="Horizontal" Margin="0,4,0,10">
+            <xctk:ColorPicker x:Name="BgColorPicker"
+                              Width="150"
+                              SelectedColorChanged="BgColorPicker_SelectedColorChanged"/>
+            <TextBox x:Name="BgColorBox" Width="110" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </StackPanel>
+        <TextBlock Text="Цвет подсветки:"/>
+        <StackPanel Orientation="Horizontal" Margin="0,4,0,10">
+            <xctk:ColorPicker x:Name="PressColorPicker"
+                              Width="150"
+                              SelectedColorChanged="PressColorPicker_SelectedColorChanged"/>
+            <TextBox x:Name="PressColorBox" Width="110" Margin="10,0,0,0" VerticalAlignment="Center"/>
+        </StackPanel>
+        <Button Content="Применить" Width="100" Margin="0,10,0,0" Click="Apply_Click"/>
+    </StackPanel>
+</Window>
